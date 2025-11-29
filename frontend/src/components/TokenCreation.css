@@ -1,0 +1,115 @@
+.token-creation {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.token-creation h2 {
+    margin-bottom: 0.5rem;
+}
+
+.token-creation .description {
+    color: #888;
+    margin-bottom: 2rem;
+}
+
+.token-creation .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.token-creation .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.token-creation .form-group input {
+    width: 100%;
+    padding: 0.75rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid #333;
+    border-radius: 8px;
+    color: inherit;
+    font-size: 1rem;
+}
+
+.token-creation .form-group input:focus {
+    outline: none;
+    border-color: #647eff;
+}
+
+.token-creation .form-group input:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.token-creation .form-group small {
+    display: block;
+    margin-top: 0.25rem;
+    color: #888;
+    font-size: 0.85rem;
+}
+
+.token-creation .error-message {
+    background: rgba(255, 59, 48, 0.1);
+    border: 1px solid rgba(255, 59, 48, 0.3);
+    color: #ff3b30;
+    padding: 0.75rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.token-creation .success-message {
+    background: rgba(52, 199, 89, 0.1);
+    border: 1px solid rgba(52, 199, 89, 0.3);
+    color: #34c759;
+    padding: 0.75rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.token-creation .btn-create {
+    width: 100%;
+    padding: 1rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+.token-creation .btn-create:hover:not(:disabled) {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+.token-creation .btn-create:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.token-creation .info-box {
+    margin-top: 2rem;
+    padding: 1rem;
+    background: rgba(100, 126, 255, 0.1);
+    border: 1px solid rgba(100, 126, 255, 0.2);
+    border-radius: 8px;
+}
+
+.token-creation .info-box h4 {
+    margin: 0 0 0.75rem 0;
+    color: #647eff;
+}
+
+.token-creation .info-box ul {
+    margin: 0;
+    padding-left: 1.5rem;
+}
+
+.token-creation .info-box li {
+    margin-bottom: 0.5rem;
+    color: #aaa;
+}

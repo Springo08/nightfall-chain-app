@@ -1,0 +1,255 @@
+.wallet-setup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.95);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 2rem;
+    overflow-y: auto;
+}
+
+.wallet-setup-container {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    border-radius: 20px;
+    padding: 3rem;
+    max-width: 800px;
+    width: 100%;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(66, 211, 146, 0.2);
+}
+
+.wallet-setup-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.wallet-setup-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, #42d392 0%, #647eff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.wallet-setup-header p {
+    color: #888;
+    font-size: 1.1rem;
+}
+
+.seed-phrase-section {
+    margin-bottom: 2rem;
+}
+
+.seed-phrase-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #42d392;
+}
+
+.seed-phrase-description {
+    color: #aaa;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.seed-phrase-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.seed-word {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(66, 211, 146, 0.2);
+    border-radius: 10px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    transition: all 0.3s ease;
+}
+
+.seed-word:hover {
+    background: rgba(66, 211, 146, 0.1);
+    border-color: rgba(66, 211, 146, 0.4);
+    transform: translateY(-2px);
+}
+
+.seed-word-number {
+    background: rgba(66, 211, 146, 0.2);
+    color: #42d392;
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 0.25rem 0.5rem;
+    border-radius: 5px;
+    min-width: 2rem;
+    text-align: center;
+}
+
+.seed-word-text {
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 500;
+    font-family: 'Courier New', monospace;
+}
+
+.seed-phrase-actions {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.btn-copy,
+.btn-download {
+    flex: 1;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-copy {
+    background: rgba(100, 126, 255, 0.2);
+    color: #647eff;
+    border: 1px solid rgba(100, 126, 255, 0.3);
+}
+
+.btn-copy:hover {
+    background: rgba(100, 126, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+.btn-download {
+    background: rgba(66, 211, 146, 0.2);
+    color: #42d392;
+    border: 1px solid rgba(66, 211, 146, 0.3);
+}
+
+.btn-download:hover {
+    background: rgba(66, 211, 146, 0.3);
+    transform: translateY(-2px);
+}
+
+.warning-box {
+    background: rgba(255, 193, 7, 0.1);
+    border: 2px solid rgba(255, 193, 7, 0.3);
+    border-radius: 15px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.warning-icon {
+    font-size: 2rem;
+    flex-shrink: 0;
+}
+
+.warning-content h3 {
+    color: #ffc107;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.warning-content ul {
+    margin: 0;
+    padding-left: 1.5rem;
+    color: #ffecb3;
+}
+
+.warning-content li {
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+}
+
+.wallet-address-section {
+    margin-bottom: 2rem;
+}
+
+.wallet-address-section h3 {
+    color: #888;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.wallet-address {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(66, 211, 146, 0.2);
+    border-radius: 10px;
+    padding: 1rem;
+    font-family: 'Courier New', monospace;
+    color: #42d392;
+    font-size: 1rem;
+    word-break: break-all;
+}
+
+.confirmation-section {
+    margin-bottom: 2rem;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    cursor: pointer;
+    color: #ddd;
+    line-height: 1.6;
+}
+
+.checkbox-label input[type="checkbox"] {
+    margin-top: 0.25rem;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: #42d392;
+}
+
+.btn-continue {
+    width: 100%;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, #42d392 0%, #647eff 100%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-continue:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(66, 211, 146, 0.3);
+}
+
+.btn-continue:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+    .wallet-setup-container {
+        padding: 2rem;
+    }
+
+    .seed-phrase-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .seed-phrase-actions {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,186 @@
+.wallet-restore-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.95);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 2rem;
+    overflow-y: auto;
+}
+
+.wallet-restore-container {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    border-radius: 20px;
+    padding: 3rem;
+    max-width: 800px;
+    width: 100%;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(100, 126, 255, 0.2);
+}
+
+.wallet-restore-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.wallet-restore-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, #647eff 0%, #42d392 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.wallet-restore-header p {
+    color: #888;
+    font-size: 1.1rem;
+}
+
+.restore-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.restore-word-input {
+    position: relative;
+}
+
+.restore-word-input label {
+    display: block;
+    color: #888;
+    font-size: 0.8rem;
+    margin-bottom: 0.25rem;
+    font-weight: 600;
+}
+
+.restore-word-input input {
+    width: 100%;
+    padding: 0.75rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(100, 126, 255, 0.2);
+    border-radius: 8px;
+    color: #fff;
+    font-size: 1rem;
+    font-family: 'Courier New', monospace;
+    transition: all 0.3s ease;
+}
+
+.restore-word-input input:focus {
+    outline: none;
+    border-color: rgba(100, 126, 255, 0.5);
+    background: rgba(100, 126, 255, 0.1);
+}
+
+.suggestions {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(30, 30, 50, 0.98);
+    border: 1px solid rgba(100, 126, 255, 0.3);
+    border-radius: 8px;
+    margin-top: 0.25rem;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 10;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.suggestion-item {
+    padding: 0.75rem;
+    color: #ddd;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: 'Courier New', monospace;
+}
+
+.suggestion-item:hover {
+    background: rgba(100, 126, 255, 0.2);
+    color: #fff;
+}
+
+.error-message {
+    background: rgba(244, 67, 54, 0.1);
+    border: 1px solid rgba(244, 67, 54, 0.3);
+    border-radius: 10px;
+    padding: 1rem;
+    color: #ff6b6b;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.restore-hint {
+    background: rgba(100, 126, 255, 0.1);
+    border: 1px solid rgba(100, 126, 255, 0.2);
+    border-radius: 10px;
+    padding: 1rem;
+    color: #647eff;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.restore-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn-cancel,
+.btn-restore {
+    flex: 1;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-cancel {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ddd;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-cancel:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
+}
+
+.btn-restore {
+    background: linear-gradient(135deg, #647eff 0%, #42d392 100%);
+    color: white;
+}
+
+.btn-restore:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(100, 126, 255, 0.3);
+}
+
+.btn-restore:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+    .wallet-restore-container {
+        padding: 2rem;
+    }
+
+    .restore-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .restore-actions {
+        flex-direction: column;
+    }
+}
